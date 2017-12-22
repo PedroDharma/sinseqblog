@@ -1,4 +1,11 @@
 <form action="/" method="post">
-  <input type="text" placeholder="sinseqblog" name="sinseq_blog">
+  <input type="text" placeholder="sinseqblog" name="description">
   <input type="submit" value="Send some post">
 </form>
+<hr>
+
+<ul>
+  <% sinseqs.each do |sinseq| %>
+    <li><%= sinseq[:description] %></li>
+  <% end %>
+</ul>
